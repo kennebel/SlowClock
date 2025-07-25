@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4jp7en8lc82j"]
+
+[ext_resource type="Texture2D" uid="uid://dbxnb4hxtj6mf" path="res://assets/kenney_space-shooter-redux/Backgrounds/darkPurple.png" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://cdcrgk2q48k4x" path="res://assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://m5a8wanucc0q" path="res://scripts/MainHand.cs" id="3_sugp2"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o5qli"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_jyhfs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_jyhfs"]
+
+[node name="main" type="Node2D"]
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="World"]
+position = Vector2(256, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("1_0wfyh")
+
+[node name="InBetween" type="Node2D" parent="World"]
+
+[node name="ClockFace" type="Node2D" parent="World"]
+
+[node name="ClockBackground" type="MeshInstance2D" parent="World/ClockFace"]
+position = Vector2(256, 256)
+scale = Vector2(480, 480)
+mesh = SubResource("SphereMesh_o5qli")
+
+[node name="ClockCenter" type="MeshInstance2D" parent="World/ClockFace"]
+position = Vector2(256, 256)
+scale = Vector2(24, 24)
+mesh = SubResource("SphereMesh_jyhfs")
+texture = ExtResource("2_sugp2")
+
+[node name="Ticks" type="Node2D" parent="World/ClockFace"]
+
+[node name="TickRig00" type="Node2D" parent="World/ClockFace/Ticks"]
+position = Vector2(256, 256)
+
+[node name="TickMark" type="MeshInstance2D" parent="World/ClockFace/Ticks/TickRig00"]
+position = Vector2(0, -231)
+scale = Vector2(10.5, 16.5)
+mesh = SubResource("BoxMesh_tbgi4")
+texture = ExtResource("2_sugp2")
+
+[node name="TickRig06" type="Node2D" parent="World/ClockFace/Ticks"]
+position = Vector2(256, 256)
+rotation = 1.5708
+
+[node name="TickMark" type="MeshInstance2D" parent="World/ClockFace/Ticks/TickRig06"]
+position = Vector2(0, -231)
+scale = Vector2(10.5, 16.5)
+mesh = SubResource("BoxMesh_tbgi4")
+texture = ExtResource("2_sugp2")
+
+[node name="TickRig12" type="Node2D" parent="World/ClockFace/Ticks"]
+position = Vector2(256, 256)
+rotation = 3.14159
+
+[node name="TickMark" type="MeshInstance2D" parent="World/ClockFace/Ticks/TickRig12"]
+position = Vector2(0, -231)
+scale = Vector2(10.5, 16.5)
+mesh = SubResource("BoxMesh_tbgi4")
+texture = ExtResource("2_sugp2")
+
+[node name="TickRig18" type="Node2D" parent="World/ClockFace/Ticks"]
+position = Vector2(256, 256)
+rotation = 4.71239
+
+[node name="TickMark" type="MeshInstance2D" parent="World/ClockFace/Ticks/TickRig18"]
+position = Vector2(0, -231)
+scale = Vector2(10.5, 16.5)
+mesh = SubResource("BoxMesh_tbgi4")
+texture = ExtResource("2_sugp2")
+
+[node name="ClockHands" type="Node2D" parent="World"]
+
+[node name="MainHandRig" type="Node2D" parent="World/ClockHands"]
+position = Vector2(256, 256)
+script = ExtResource("3_sugp2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="World/ClockHands/MainHandRig"]
+position = Vector2(0, -125)
+rotation = 3.14159
+scale = Vector2(10, 200)
+mesh = SubResource("PrismMesh_jyhfs")
+texture = ExtResource("2_sugp2")
