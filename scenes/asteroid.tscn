@@ -1,0 +1,31 @@
+[gd_scene load_steps=22 format=3 uid="uid://cccd5xf6vrisa"]
+
+[ext_resource type="Script" uid="uid://c83u6af6i0f28" path="res://scripts/Asteroid.cs" id="1_6mo6b"]
+[ext_resource type="Texture2D" uid="uid://douluitkestk1" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_big1.png" id="2_t4se3"]
+[ext_resource type="Texture2D" uid="uid://c0vjjimjcbarg" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_big2.png" id="3_iulen"]
+[ext_resource type="Texture2D" uid="uid://tssln3dmllr8" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_big3.png" id="4_f6yqi"]
+[ext_resource type="Texture2D" uid="uid://bcqnfp8mgaw0v" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_big4.png" id="5_odclm"]
+[ext_resource type="Texture2D" uid="uid://m2u23fuufhrn" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_med1.png" id="6_oxeq2"]
+[ext_resource type="Texture2D" uid="uid://d1me6wdcxwv42" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_med3.png" id="7_p8y1m"]
+[ext_resource type="Texture2D" uid="uid://ci2cunq4arq5j" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_small1.png" id="8_8qhtw"]
+[ext_resource type="Texture2D" uid="uid://boicr2ohm7nb" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_small2.png" id="9_81iua"]
+[ext_resource type="Texture2D" uid="uid://cpmk1xirj76tg" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_tiny1.png" id="10_6niau"]
+[ext_resource type="Texture2D" uid="uid://dqt56ba37kg8v" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_tiny2.png" id="11_ludnq"]
+[ext_resource type="Texture2D" uid="uid://3rilcghnpbbp" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big1.png" id="12_bh65q"]
+[ext_resource type="Texture2D" uid="uid://c5b0ibk3p8yyi" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big2.png" id="13_kr57d"]
+[ext_resource type="Texture2D" uid="uid://pvavqf5br71g" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big3.png" id="14_li2iw"]
+[ext_resource type="Texture2D" uid="uid://ejd2sgvw812f" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big4.png" id="15_cra4b"]
+[ext_resource type="Texture2D" uid="uid://bsgwdffts2kw4" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_med1.png" id="16_0g8ci"]
+[ext_resource type="Texture2D" uid="uid://da7rabok3td8y" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_med2.png" id="17_hjj8h"]
+[ext_resource type="Texture2D" uid="uid://27g8my13788u" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_small1.png" id="18_pw1uh"]
+[ext_resource type="Texture2D" uid="uid://cl8tawbg67tko" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_small2.png" id="19_4kiv3"]
+[ext_resource type="Texture2D" uid="uid://b8qw6ggsqhtdj" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_tiny1.png" id="20_yma3l"]
+[ext_resource type="Texture2D" uid="uid://dsq2ngf0o30d7" path="res://assets/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_tiny2.png" id="21_esxeq"]
+
+[node name="Asteroid" type="Node2D" node_paths=PackedStringArray("VisualItem")]
+script = ExtResource("1_6mo6b")
+VisualTextures = Array[Texture2D]([ExtResource("2_t4se3"), ExtResource("3_iulen"), ExtResource("4_f6yqi"), ExtResource("5_odclm"), ExtResource("6_oxeq2"), ExtResource("7_p8y1m"), ExtResource("8_8qhtw"), ExtResource("9_81iua"), ExtResource("10_6niau"), ExtResource("11_ludnq"), ExtResource("12_bh65q"), ExtResource("13_kr57d"), ExtResource("14_li2iw"), ExtResource("15_cra4b"), ExtResource("16_0g8ci"), ExtResource("17_hjj8h"), ExtResource("18_pw1uh"), ExtResource("19_4kiv3"), ExtResource("20_yma3l"), ExtResource("21_esxeq")])
+VisualItem = NodePath("Visual")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("2_t4se3")
