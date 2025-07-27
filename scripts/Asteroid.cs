@@ -46,11 +46,17 @@ public partial class Asteroid : Node2D
 
 	protected void Reset()
 	{
+		// New starting position
 		this.Position = new Vector2(GD.RandRange(0, 512), StartY);
 
+		// Randomize the new speed, with a chance for a small sideways drift
 		ActualDownSpeed = (float)(DownSpeed + (float)GD.RandRange(0d, DownVariation));
 		ActualSideSpeed = (float)(SideSpeed + (float)GD.RandRange(-SideVariation, SideVariation));
 
+		// Rotate andomly for more visual interest
+		VisualItem.Rotation = (float)GD.RandRange(0, Utilities.TwoPi);
+
+		// Pick new random image
 		VisualItem.Texture = VisualTextures[GD.RandRange(0, VisualTextures.Length)];
 	}
 }

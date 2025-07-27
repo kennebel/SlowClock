@@ -11,7 +11,7 @@ public partial class Ship : Node2D
 
 	[ExportGroup("Limits")]
 	[Export]
-	public float StartCircleDistance { get; set; } = 325;
+	public float StartCircleDistance { get; set; } = 350;
 	[Export]
 	public Vector2 AppCenter { get; set; } = new Vector2(256, 256);
 
@@ -23,27 +23,31 @@ public partial class Ship : Node2D
 
 	public override void _Ready()
 	{
-		// Temp
-		StartCircleDistance = 200f;
-
 		Reset();
 	}
 
 	public override void _Process(double delta)
 	{
 		// Move
+		this.Position += this.Transform.X * (Speed * (float)delta);
 
-		// Check distance to target
-		
+		// Check distance from center, when off screen reset
+		if ((this.Position - AppCenter).Length() > StartCircleDistance)
+		{
+			Reset();
+		}
 	}
 
 	public void Reset()
 	{
-		this.Position = (Extensions.RandOnUnitcircle() * StartCircleDistance) + AppCenter;
-		TargetPos = (Extensions.RandOnUnitcircle() * StartCircleDistance) + AppCenter;
+		// Start and Target positions
+		this.Position = (Utilities.RandOnUnitcircle() * StartCircleDistance) + AppCenter;
+		TargetPos = (Utilities.RandOnUnitcircle() * StartCircleDistance) + AppCenter;
 
-		VisualItem.Texture = VisualTextures[GD.RandRange(0, VisualTextures.Length)];
-
+		// Rotate to update transform for new target
 		this.LookAt(TargetPos);
+
+		// Pick new random image
+		VisualItem.Texture = VisualTextures[GD.RandRange(0, VisualTextures.Length)];
 	}
 }
