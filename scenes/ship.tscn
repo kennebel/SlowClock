@@ -1,0 +1,28 @@
+[gd_scene load_steps=18 format=3 uid="uid://dji75ggwq1x88"]
+
+[ext_resource type="Script" uid="uid://d00fhj2h7nb2f" path="res://scripts/Ship.cs" id="1_vbj2c"]
+[ext_resource type="Texture2D" uid="uid://nydf0pva3v3p" path="res://assets/kenney_space-shooter-redux/PNG/playerShip1_blue.png" id="2_dschd"]
+[ext_resource type="Texture2D" uid="uid://byj6xtq38heu" path="res://assets/kenney_space-shooter-redux/PNG/playerShip1_green.png" id="3_83dbu"]
+[ext_resource type="Texture2D" uid="uid://d3ftprce3582" path="res://assets/kenney_space-shooter-redux/PNG/playerShip1_orange.png" id="4_xifwb"]
+[ext_resource type="Texture2D" uid="uid://ckktorus1u0e2" path="res://assets/kenney_space-shooter-redux/PNG/playerShip1_red.png" id="5_swuwe"]
+[ext_resource type="Texture2D" uid="uid://dgyhdtdj2n26n" path="res://assets/kenney_space-shooter-redux/PNG/playerShip2_blue.png" id="6_6vtx4"]
+[ext_resource type="Texture2D" uid="uid://lwoe32acdnmt" path="res://assets/kenney_space-shooter-redux/PNG/playerShip2_green.png" id="7_r5rhe"]
+[ext_resource type="Texture2D" uid="uid://deg4qhasajgfr" path="res://assets/kenney_space-shooter-redux/PNG/playerShip2_orange.png" id="8_nwefg"]
+[ext_resource type="Texture2D" uid="uid://bpx11qhel5lk0" path="res://assets/kenney_space-shooter-redux/PNG/playerShip2_red.png" id="9_08ed0"]
+[ext_resource type="Texture2D" uid="uid://64m71b4hp3yj" path="res://assets/kenney_space-shooter-redux/PNG/playerShip3_blue.png" id="10_7tpya"]
+[ext_resource type="Texture2D" uid="uid://bs7u1jnly1wjh" path="res://assets/kenney_space-shooter-redux/PNG/playerShip3_green.png" id="11_q0sdf"]
+[ext_resource type="Texture2D" uid="uid://bodnq6lik0get" path="res://assets/kenney_space-shooter-redux/PNG/playerShip3_orange.png" id="12_u7rkd"]
+[ext_resource type="Texture2D" uid="uid://boff388hu2de0" path="res://assets/kenney_space-shooter-redux/PNG/playerShip3_red.png" id="13_o1i5q"]
+[ext_resource type="Texture2D" uid="uid://cnavklaenhx05" path="res://assets/kenney_space-shooter-redux/PNG/ufoBlue.png" id="14_kwpx1"]
+[ext_resource type="Texture2D" uid="uid://caxml44pov63p" path="res://assets/kenney_space-shooter-redux/PNG/ufoGreen.png" id="15_qy1vx"]
+[ext_resource type="Texture2D" uid="uid://rh7xi6hti1yl" path="res://assets/kenney_space-shooter-redux/PNG/ufoRed.png" id="16_ud00f"]
+[ext_resource type="Texture2D" uid="uid://muxrsnq2egeu" path="res://assets/kenney_space-shooter-redux/PNG/ufoYellow.png" id="17_rxy3i"]
+
+[node name="Ship" type="Node2D" node_paths=PackedStringArray("VisualItem")]
+script = ExtResource("1_vbj2c")
+VisualTextures = Array[Texture2D]([ExtResource("2_dschd"), ExtResource("3_83dbu"), ExtResource("4_xifwb"), ExtResource("5_swuwe"), ExtResource("6_6vtx4"), ExtResource("7_r5rhe"), ExtResource("8_nwefg"), ExtResource("9_08ed0"), ExtResource("10_7tpya"), ExtResource("11_q0sdf"), ExtResource("12_u7rkd"), ExtResource("13_o1i5q"), ExtResource("14_kwpx1"), ExtResource("15_qy1vx"), ExtResource("16_ud00f"), ExtResource("17_rxy3i")])
+VisualItem = NodePath("Visual")
+
+[node name="Visual" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dschd")

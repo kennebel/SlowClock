@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4jp7en8lc82j"]
+[gd_scene load_steps=11 format=3 uid="uid://b4jp7en8lc82j"]
 
 [ext_resource type="Texture2D" uid="uid://dbxnb4hxtj6mf" path="res://assets/kenney_space-shooter-redux/Backgrounds/darkPurple.png" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://celfxajpyxuph" path="res://scripts/Main.cs" id="1_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://cdcrgk2q48k4x" path="res://assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cccd5xf6vrisa" path="res://scenes/asteroid.tscn" id="2_tefeu"]
 [ext_resource type="Script" uid="uid://m5a8wanucc0q" path="res://scripts/MainHand.cs" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dji75ggwq1x88" path="res://scenes/ship.tscn" id="3_tefeu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_o5qli"]
 
@@ -14,10 +15,12 @@
 
 [sub_resource type="PrismMesh" id="PrismMesh_jyhfs"]
 
-[node name="main" type="Node2D" node_paths=PackedStringArray("AsteroidHolder")]
+[node name="main" type="Node2D" node_paths=PackedStringArray("AsteroidHolder", "ShipHolder")]
 script = ExtResource("1_tbgi4")
 AsteroidTemplate = ExtResource("2_tefeu")
 AsteroidHolder = NodePath("World/InBetween/Asteroids")
+ShipTemplate = ExtResource("3_tefeu")
+ShipHolder = NodePath("World/InBetween/Ships")
 
 [node name="Menu" type="Node" parent="."]
 

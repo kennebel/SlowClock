@@ -52,7 +52,5 @@ public partial class Asteroid : Node2D
 		ActualSideSpeed = (float)(SideSpeed + (float)GD.RandRange(-SideVariation, SideVariation));
 
 		VisualItem.Texture = VisualTextures[GD.RandRange(0, VisualTextures.Length)];
-
-		//GD.Print("New Asteroid Params: <", this.Position.X, ",", this.Position.Y, "> | Down: ", ActualDownSpeed, " | Side: ", ActualSideSpeed);
 	}
 }
