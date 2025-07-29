@@ -18,8 +18,8 @@
 [node name="main" type="Node2D" node_paths=PackedStringArray("AsteroidHolder", "ShipHolder")]
 script = ExtResource("1_tbgi4")
 AsteroidTemplate = ExtResource("2_tefeu")
-AsteroidHolder = NodePath("World/InBetween/Asteroids")
 ShipTemplate = ExtResource("3_tefeu")
+AsteroidHolder = NodePath("World/InBetween/Asteroids")
 ShipHolder = NodePath("World/InBetween/Ships")
 
 [node name="Menu" type="Node" parent="."]
